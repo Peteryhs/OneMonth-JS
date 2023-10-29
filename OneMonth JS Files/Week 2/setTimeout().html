@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript: Animation</title>
+  <style type="text/css">
+
+    #container{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      height: 500px;
+      width: 500px;
+      border: 3px solid #CCC;
+      background-color: #FFF;
+    }
+
+    .box{
+      float: left;
+      width: 75px;
+      height: 100px;
+      margin: 10px;
+      background: #FFF url('http://placekitten.com/g/75/100/') no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+<div id="container">
+
+</div>
+<script>
+
+
+  var x;
+  for(x=0;x<20;x++) {
+
+    setTimeout(function(){ //a cool down
+
+      var box = document.createElement('div');
+      box.className = 'box'; //get the image witht he css code
+      document.getElementById('container').appendChild(box); //put that into the container
+
+
+
+    },500*x //500 ms per box(x)
+
+  }
+
+
+
+
+</script>
+</body>
+</html>

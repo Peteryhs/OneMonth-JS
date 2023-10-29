@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #breakfastimages {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    #lunchimages {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    #dinnerimages {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+</style>
+<body>
+<h1>Food Chooser</h1>
+<div id="messages"> </div>
+<img id="breakfastimages" src=""/>
+<img id="lunchimages" src=""/>
+<img id="dinnerimages" src=""/>
+
+</body>
+<script>
+  var breakfast =[
+            "eggs and bacon" ,
+            "cereal",
+            "oatmeal",
+  ]
+    var lunch =[
+                "sandwich",
+                "salad",
+                "soup",
+    ]
+    var dinner =[
+                "steak",
+                "chicken",
+                "pork",
+    ]
+  var breakfastimages = [
+            "pictures for food/eggs and bacon.jpg" ,
+            "pictures for food/cereal.jpg",
+            "pictures for food/oatmeal.jpg",
+  ]
+    var lunchimages =[
+                "pictures for food/sandwich.jpg",
+                "pictures for food/salad.jpg",
+                "pictures for food/soup.jpg",
+    ]
+    var dinnerimages =[
+                "pictures for food/steak.jpg",
+                "pictures for food/chicken.jpg",
+                "pictures for food/pork.jpg",
+  ]
+  var randomNumber1 =Math.floor (Math.random()*breakfast.length);
+  var randomNumber2 =Math.floor (Math.random()*breakfast.length);
+  var randomNumber3 =Math.floor (Math.random()*breakfast.length);
+  var breakfastname = breakfast[randomNumber1];
+  var lunchname = lunch[randomNumber2];
+  var dinnername = dinner[randomNumber3];
+  message = "<h2>" + "Today how about you get " + breakfastname + " for breakfast" + " and " + lunchname + " for lunch " + " and finally "  + dinnername + " for dinner?" + "</h2>"
+  document.getElementById("messages").innerHTML = message;
+  document.getElementById("breakfastimages").src = breakfastimages[randomNumber1];
+  document.getElementById("lunchimages").src = lunchimages[randomNumber2];
+  document.getElementById("dinnerimages").src = dinnerimages[randomNumber3];
+
+
+</script>
+</html>

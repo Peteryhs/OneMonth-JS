@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mr. JavaScript</title>
+</head>
+<body>
+    <h1>I'm Mr. JavaScript</h1>
+    <a href="#" id="howareyou">Hey JavaScript how are you doing1</a>
+    <a href="#" id="divide">|</a>
+    <a href="#" id="reset">Reset</a>
+<script>
+    //DOM means document object model, it is the HTML output of the browser
+    var a = document.getElementById("howareyou"); //grab a
+    var reset = document.getElementById("reset"); //grab reset
+
+    a.addEventListener('click',function(){  //just code here and it works inside here
+        var h1 = document.querySelector("h1"); //grab h1
+
+        h1.innerHTML = "I'm Alive!"; //change h1
+        console.log(h1);
+    }); //event listener, the function looks ugly, but function () {stuff in function}
+
+    reset.addEventListener('click',function(){  //just code here and it works inside here
+        var h1 = document.querySelector("h1"); //grab h1
+
+        h1.innerHTML = "I'm Mr. JavaScript"; //change h1
+        console.log(h1);
+    }); //event listener, the function looks ugly, but function () {stuff in function}
+</script>
+</body>
+</html>

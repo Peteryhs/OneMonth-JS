@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Happy Hour App - How about a drink!?">
+		<meta name="keywords" content="happy hour, drink, beers">
+
+		<title>Happy Hour</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script>
+		
+			// Our List of Bars
+			var bars = [
+				'Siggys',
+				'Blind Tiger',
+				'Zum Schneider',
+				'One Month',
+				'Home Sweet Home',
+				'Union Pool',
+				'Gaza',
+			];
+
+			// Our List of Friends
+			var friends = [  //Bonus. if 3 fiends are removed then the number of items in friends will decrease. Since the random number is generated based on bars, which has more items, when a number for an item is called and the number don't exist on friends, then it will display undefined. We can fix it by A. adding/removing some items so bars and friends has the same amount of items. B. make the random a separate thing for each array.
+				'Mattan',
+				'Chris',
+				'Lee',
+				'Casey',
+				'that girl you forgot to text back',
+				'Kayne West',
+				'Bill Gates ', //7. New friend
+			];
+
+			var randomNumber =Math.floor (Math.random()*bars.length); // 6. That is a nameplace object that contains static properties and methods for mathmetical constants and functions. In this case random is used to generates a random number between 0 and 6 (bars.length). 5.  The .floor means that it must be a whole number. When it is removed, it will likely generate decimals, then the two items can be selected and display undefined since they are labeled in whole numbers.
+
+			var barname = bars[randomNumber]; //3. if you replace random number with 3, then the barname will be One Month since it is the 3rd (counting from 0) item in the array.
+			var friendname = friends[randomNumber];
+
+			document.write("How about you go to <strong>" + barname + "</strong> with <strong>" + friendname + "</strong>?");
+			document.write(randomNumber); //1. this prints out the random number which is between 0-6 (the number of bars in the array). 2. A 0 is printed out sometimes because an array in code start with 0 not one.
+			document.write(bars.length) //4. this prints out the number of items in the array.
+
+		</script>
+	</head>
+	<body>
+		<!-- PAGE CONTENT WILL BE PRINTED HERE --> 
+	</body>
+</html>

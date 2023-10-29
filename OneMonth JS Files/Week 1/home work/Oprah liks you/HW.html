@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oprah Likes You. And so do other people.</title>
+
+  <style>
+
+    /* Basic CSS comment */
+    body {
+      background: #BBB;
+      color: white;
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 80px;
+      color: #333	;
+    }
+
+  </style>
+</head>
+<body>
+<div id= "messages"> </div>
+<img id="carimages" src=""/>
+
+</body>
+  <script>
+
+
+    var username = prompt("What is your first name?", "e.g. Peter");
+    var car = ["BMW", "Audi", "Volvo" ];
+    var which_car = Math.floor(Math.random()*car.length);
+    console.log(which_car);
+    console.log(car[which_car]);
+    if(username==="Peter") { //make the message an element so we can get a div and grap it ontop of the HTML
+      message = "<h1>" + "Hello " + username + " you won a " + car[which_car]+ "!" + "</h1>";
+    }
+    else if (username==="Chris") {
+      message = "<h1>" + "Hello " + username + " you won a " + car[which_car]+ "!" + "</h1>";
+    }
+    else {
+      message = "<h1>" + "Hello " + username + "!" + "</h1>";
+      which_car= 3;
+
+    }
+    document.getElementById("messages").innerHTML = message; //make it an id
+    var carimages = ["BMW.jpg", "Audi.jpg", "Volvo.jpg", "1rstmo.jpg" ];
+
+    document.getElementById("carimages").src = carimages[which_car];
+
+
+
+
+  </script>
+
+
+</html>
+
